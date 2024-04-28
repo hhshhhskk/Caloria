@@ -10,7 +10,13 @@ const Header: React.FC = () => {
     <header className={styles.header}>
       <div className={styles.logo}>
         <Link href="/">
-          <Image src="/image/main_logo.svg" alt="Logo" width={50} height={60} />
+          <Image
+            src="/image/main_logo.svg"
+            alt="Logo"
+            width={50}
+            height={60}
+            priority={true}
+          />
         </Link>
       </div>
       <div className={styles.category}>

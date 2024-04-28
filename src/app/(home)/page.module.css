@@ -1,7 +1,8 @@
 .main {
+  background-color: blanchedalmond;
   position: relative;
   width: 100%;
-  height: calc(100% - 80px);
+  height: calc(100vh - 80px);
 }
 
 .search {
@@ -18,7 +19,7 @@
 .search_input {
   background-color: #fff;
   width: 740px;
-  height: 60px;
+  height: 58px;
   padding-left: 20px;
   font-size: 24px;
   outline: none;
