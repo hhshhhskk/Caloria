@@ -24,13 +24,15 @@ const Home: React.FC = () => {
 
   return (
     <main className={styles.main}>
-      <Image
-        src="/image/main_bg.svg"
-        alt="bg"
-        priority={true}
-        fill
-        style={{ objectFit: "cover" }}
-      />
+      <div className={styles.logoBox}>
+        <Image
+          src="/image/main_logo.svg"
+          alt="icon_logo"
+          priority={true}
+          fill
+          style={{ objectFit: "cover" }}
+        />
+      </div>
       <div className={styles.search}>
         <input
           className={styles.search_input}
@@ -41,7 +43,7 @@ const Home: React.FC = () => {
           placeholder="검색어를 입력하세요"
         />
         <div className={styles.search_btn} onClick={handleButtonClick}>
-          <Image src="/image/search_btn.svg" alt="bg" width={30} height={30} />
+          <Image src="/image/search_btn.svg" alt="bg" width={20} height={20} />
         </div>
       </div>
     </main>
