@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/common/Header";
+import Footer from "@/components/common/Footer";
 
 export const metadata: Metadata = {
   title: "Caloria",
@@ -17,6 +18,7 @@ export default function RootLayout({
       <body>
         {/* <Header /> */}
         {children}
+        <Footer />
       </body>
     </html>
   );

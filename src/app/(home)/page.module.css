@@ -2,7 +2,7 @@
   background-color: blanchedalmond;
   position: relative;
   width: 100%;
-  height: calc(100vh - 80px);
+  flex: 1;
 
   padding-top: 100px;
 
