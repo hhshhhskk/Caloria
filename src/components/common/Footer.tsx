@@ -1,11 +1,26 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import styles from "../../styles/common/footer.module.css";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const Footer: React.FC = () => {
-  const category = ["home", "레시피", "게시판", "마이페이지"];
+  const router = useRouter();
+  const category = ["home", "food", "user", "user"];
+  const [clickedIndex, setClickedIndex] = useState<number | null>(0);
+
+  const categoryClicked = (categoryName: string, idx: number) => {
+    categoryName === "home"
+      ? router.push(`/`)
+      : categoryName === "food"
+      ? router.push(`/foodList`)
+      : categoryName === "user"
+      ? router.push(`/user`)
+      : null;
+
+    setClickedIndex(idx);
+  };
 
   return (
     <footer className={styles.footer}>
@@ -15,10 +30,15 @@ const Footer: React.FC = () => {
             key={idx}
             className={styles.item}
             onClick={() => {
-              console.log(item);
+              categoryClicked(item, idx);
             }}
           >
-            {item}
+            <Image
+              src={`/image/${item}${clickedIndex === idx ? "2" : "1"}.svg`}
+              alt="icon"
+              width={30}
+              height={30}
+            />
           </div>
         );
       })}

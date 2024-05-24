@@ -14,7 +14,7 @@ const Home: React.FC = () => {
   };
 
   const handleButtonClick = () => {
-    router.push(`/calorie/${keyword}`);
+    router.push(`/foodList/${keyword}`);
   };
   const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
